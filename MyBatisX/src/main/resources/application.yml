@@ -1,0 +1,32 @@
+#datasource
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: ws
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://fenglingzmb.com:3306/MyBatis
+
+
+logging:
+  level:
+    root: info
+    com.fenglingzmb.bootplus: info
+
+
+mybatis-plus:
+  type-enums-package: com.fenglingzmb.bootplus.enums
+  configuration:
+#    default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: com.fenglingzmb.bootplus.pojo
+  global-config:
+    db-config:
+      id-type: assign_id
+#      table-prefix: t_
+
+
+
+
+
+

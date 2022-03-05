@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    dynamic:
+      # ??????????
+      primary: master
+      # ????????????????????
+      strict: false
+      datasource:
+        master:
+          type: com.alibaba.druid.pool.DruidDataSource
+          username: root
+          password: ws
+          driver-class-name: com.mysql.jdbc.Driver
+          url: jdbc:mysql://fenglingzmb.com:3306/MyBatis
+        slave:
+          type: com.alibaba.druid.pool.DruidDataSource
+          username: root
+          password: ws
+          driver-class-name: com.mysql.jdbc.Driver
+          url: jdbc:mysql://fenglingzmb.com:3306/my2
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
